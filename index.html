@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Interest Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script type="text/javascript">
+        function calculate(){
+            var p = 0;  
+            var r = 0;
+            var t = 0;
+            var si = 0;
+            p = parseFloat(document.getElementById("principal").value);
+            r = parseFloat(document.getElementById("rate").value);
+            t = parseFloat(document.getElementById("years").value);
+            si = (p*r*t)/100;
+            console.log("si="+si);
+            document.getElementById("result").innerHTML="Rs. "+si.toFixed(2);
+        }
+        function resetResult(){
+            document.getElementById("result").innerHTML="Rs. 0.00";
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 style="text-align: center;font-weight: bold;">Simple Interest Calculator</h1>
+                <hr style="width:50%;margin-left:25%;"/>
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 20%;margin-right: 20%;margin-top: 5%;font-size: 1.3em;">
+            <div class="col-md-12">
+                <form onsubmit="return false;">
+                    <div class="form-group">
+                        <label class="form-group">Principal:</label>
+                        <input class="form-control" type="text" placeholder ="Enter the principal amount(in Rs.)" id="principal">
+                    </div>
+                     <div class="form-group" style="margin-top: 3%;">
+                         <label class="form-group">Number Of Years:</label>
+                         <input class="form-control" type="text" placeholder="Enter the no. of years" id="years">
+                    </div>
+                    <div class="form-group" style="margin-top: 3%;">
+                        <label class="form-group">Rate Of Interest:</label>
+                        <input class="form-control" type="text" placeholder="Enter the rate of interest (per annum)" id="rate">
+                    </div>
+                    <br/>
+                    <button class="btn btn-primary" type="submit" onClick="calculate();">Calculate</button>
+                    <button class="btn btn-danger" type="reset" onClick="resetResult();">Reset</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 id="result" style="padding-top: 3%;margin-left: 20%;">Rs. 0.00</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
