@@ -10,4 +10,4 @@ A Web Development Mini Project on Building A Simple Interest Calculator Using HT
 
 ## Demo
 
-![Interest Calculator Live Demo](https://gourav1001.github.io/A-Simple-Interest-Calculator/)
+[Interest Calculator Live Demo](https://gourav1001.github.io/A-Simple-Interest-Calculator/)
